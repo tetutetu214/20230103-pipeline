@@ -16,6 +16,7 @@ Metadata:
         - MemorySize
         - Runtime
         - Timeout
+        - TagsName
 
 # ------------------------------------------------------------#
 #  InputParameters
@@ -39,6 +40,10 @@ Parameters:
   Timeout:
     Type: String
     Default: "10"
+  TagsName:
+    Type: String
+    Description: UserName
+    Default: "inamura"
 
 # ------------------------------------------------------------#
 #  Resources
@@ -69,6 +74,9 @@ Resources:
       Runtime: !Ref Runtime
       Timeout: !Ref Timeout
       Role: !GetAtt LambdaRole.Arn
+      Tags: 
+        - Key: "User"
+          Value: !Ref TagsName
 
   LambdaRole:
     Type: AWS::IAM::Role
