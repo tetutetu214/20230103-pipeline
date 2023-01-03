@@ -41,7 +41,7 @@ Resources:
       Code:
         S3:
           Bucket: !ImportValue cfn-s3-BucketName
-          Key: infra.zip
+          Key: cicd.zip
 # ------------------------------------------------------------#
 # Output Parameters
 #------------------------------------------------------------#          

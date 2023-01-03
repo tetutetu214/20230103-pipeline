@@ -100,3 +100,7 @@ Outputs:
     Value: !Ref S3Bucket
     Export:
       Name: cfn-s3-BucketName
+  S3BucketArn:
+    Value: !GetAtt S3Bucket.Arn
+    Export:
+      Name: cfn-s3-BucketArn
